@@ -7,8 +7,10 @@ const HomePage = (props: {}) => {
   const navigate = useNavigate();
 
   const testModel = () => {
+    console.log("예??");
     const asyncFun = async () => {
-      await axios.post( "http://localhost:8080" + '/challenge/testChallenge', {  } );
+      console.log("???")
+      await axios.post( "http://localhost:8080" + '/challenge/testChallenge', { } );
     }
     asyncFun().catch(e => window.alert(`AN ERROR OCCURED! ${e}`));
   }
